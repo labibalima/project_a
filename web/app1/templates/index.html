@@ -1,22 +1,25 @@
-<!DOCTYPE html>
+{% load static %}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title></title>
+    
   </head>
   <body>
-    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <table>
     <tr>
       <th> name </th>
       <th> age </th>
       <th> class </th>
+      <th> Gender </th>
     </tr>  
     {% for retust in all_retust %}
     <tr>
       <td> {{retust.name}}</td>
       <td>{{retust.age }}</td>
       <td> {{retust.class_of_student}}</td>
+      <td> {{ retust.gender }}</td>
     </tr>
     {% endfor %}
     </table>
